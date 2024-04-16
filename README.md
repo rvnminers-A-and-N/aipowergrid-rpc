@@ -15,7 +15,7 @@ Aipowergrid as a service, you don't need your own node
 # Install
 
 ```
-npm install @aipgrebels/aipowergrid-rpc
+npm install @ravenrebels/aipowergrid-rpc
 ```
 
 # Example using ES modules
@@ -26,7 +26,7 @@ In node.js you need to give the file the ending .mjs for modular JavaScript.
 Like `example.mjs`
 
 ```
-import { getRPC, methods } from "@aipgrebels/aipowergrid-rpc";
+import { getRPC, methods } from "@ravenrebels/aipowergrid-rpc";
 
 const username = "anonymous";
 const password = "anonymous";
@@ -41,7 +41,7 @@ rpc(methods.getblockcount, params).then(console.log);
 
 ```
 
-const { getRPC, methods } = require("@aipgrebels/aipowergrid-rpc");
+const { getRPC, methods } = require("@ravenrebels/aipowergrid-rpc");
 //methods is a list of all available methods/functions/commands/procedures
 
 const rpc = getRPC("UsernameSecret", "PasswordSecret", "http://localhost:8766");
@@ -70,7 +70,7 @@ Use method `listreceivedbyaddress` to receive a list of all generated addresses.
 Write the result to a .json file
 
 ```
-const { getRPC, methods } = require("@aipgrebels/aipowergrid-rpc");
+const { getRPC, methods } = require("@ravenrebels/aipowergrid-rpc");
 //methods is a list of all available methods/functions/commands/procedures
 
 const method = methods.listreceivedbyaddress;

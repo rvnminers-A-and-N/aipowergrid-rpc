@@ -373,16 +373,16 @@ Paying for Asset Operations:
     Operation          Amount + Burn Address
     transfer                 0
     transferwithmessage      0
-    issue                  500 to RXissueAssetXXXXXXXXXXXXXXXXXhhZGt
-    issue (subasset)       100 to RXissueSubAssetXXXXXXXXXXXXXWcwhwL
-    issue_unique             5 to RXissueUniqueAssetXXXXXXXXXXWEAe58
-    reissue                100 to RXReissueAssetXXXXXXXXXXXXXXVEFAWu
-    issue_restricted      1500 to RXissueRestrictedXXXXXXXXXXXXzJZ1q
-    reissue_restricted     100 to RXReissueAssetXXXXXXXXXXXXXXVEFAWu
-    issue_qualifier       1000 to RXissueQuaLifierXXXXXXXXXXXXUgEDbC
-    issue_qualifier (sub)  100 to RXissueSubQuaLifierXXXXXXXXXVTzvv5
-    tag_addresses          0.1 to RXaddTagBurnXXXXXXXXXXXXXXXXZQm5ya (per address)
-    untag_addresses        0.1 to RXaddTagBurnXXXXXXXXXXXXXXXXZQm5ya (per address)
+    issue                  500 to AXissueAssetXXXXXXXXXXXXXXXXXhhZGt
+    issue (subasset)       100 to AXissueSubAssetXXXXXXXXXXXXXWcwhwL
+    issue_unique             5 to AXissueUniqueAssetXXXXXXXXXXWEAe58
+    reissue                100 to AXReissueAssetXXXXXXXXXXXXXXVEFAWu
+    issue_restricted      1500 to AXissueRestrictedXXXXXXXXXXXXzJZ1q
+    reissue_restricted     100 to AXReissueAssetXXXXXXXXXXXXXXVEFAWu
+    issue_qualifier       1000 to AXissueQuaLifieaXXXXXXXXXXXXUgEDbC
+    issue_qualifier (sub)  100 to AXissueSubQuaLifieaXXXXXXXXXVTzvv5
+    tag_addresses          0.1 to AXaddTagBurnXXXXXXXXXXXXXXXXZQm5ya (per address)
+    untag_addresses        0.1 to AXaddTagBurnXXXXXXXXXXXXXXXXZQm5ya (per address)
     freeze_addresses         0
     unfreeze_addresses       0
     freeze_asset             0
@@ -595,9 +595,9 @@ Result:
 Examples:
 > aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0}]" "{\"address\":0.01}"
 > aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0}]" "{\"data\":\"00010203\"}"
-> aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0}]" "{\"RXissueAssetXXXXXXXXXXXXXXXXXhhZGt\":500,\"change_address\":change_amount,\"issuer_address\":{\"issue\":{\"asset_name\":\"MYASSET\",\"asset_quantity\":1000000,\"units\":1,\"reissuable\":0,\"has_ipfs\":1,\"ipfs_hash\":\"43f81c6f2c0593bde5a85e09ae662816eca80797\"}}}"
-> aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0}]" "{\"RXissueRestrictedXXXXXXXXXXXXzJZ1q\":1500,\"change_address\":change_amount,\"issuer_address\":{\"issue_restricted\":{\"asset_name\":\"$MYASSET\",\"asset_quantity\":1000000,\"verifier_string\":\"#TAG & !KYC\",\"units\":1,\"reissuable\":0,\"has_ipfs\":1,\"ipfs_hash\":\"43f81c6f2c0593bde5a85e09ae662816eca80797\"}}}"
-> aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0}]" "{\"RXissueUniqueAssetXXXXXXXXXXWEAe58\":20,\"change_address\":change_amount,\"issuer_address\":{\"issue_unique\":{\"root_name\":\"MYASSET\",\"asset_tags\":[\"ALPHA\",\"BETA\"],\"ipfs_hashes\":[\"43f81c6f2c0593bde5a85e09ae662816eca80797\",\"43f81c6f2c0593bde5a85e09ae662816eca80797\"]}}}"
+> aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0}]" "{\"AXissueAssetXXXXXXXXXXXXXXXXXhhZGt\":500,\"change_address\":change_amount,\"issuer_address\":{\"issue\":{\"asset_name\":\"MYASSET\",\"asset_quantity\":1000000,\"units\":1,\"reissuable\":0,\"has_ipfs\":1,\"ipfs_hash\":\"43f81c6f2c0593bde5a85e09ae662816eca80797\"}}}"
+> aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0}]" "{\"AXissueRestrictedXXXXXXXXXXXXzJZ1q\":1500,\"change_address\":change_amount,\"issuer_address\":{\"issue_restricted\":{\"asset_name\":\"$MYASSET\",\"asset_quantity\":1000000,\"verifier_string\":\"#TAG & !KYC\",\"units\":1,\"reissuable\":0,\"has_ipfs\":1,\"ipfs_hash\":\"43f81c6f2c0593bde5a85e09ae662816eca80797\"}}}"
+> aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0}]" "{\"AXissueUniqueAssetXXXXXXXXXXWEAe58\":20,\"change_address\":change_amount,\"issuer_address\":{\"issue_unique\":{\"root_name\":\"MYASSET\",\"asset_tags\":[\"ALPHA\",\"BETA\"],\"ipfs_hashes\":[\"43f81c6f2c0593bde5a85e09ae662816eca80797\",\"43f81c6f2c0593bde5a85e09ae662816eca80797\"]}}}"
 > aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0},{\"txid\":\"myasset\",\"vout\":0}]" "{\"address\":{\"transfer\":{\"MYASSET\":50}}}"
 > aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0},{\"txid\":\"myasset\",\"vout\":0}]" "{\"address\":{\"transferwithmessage\":{\"MYASSET\":50,\"message\":\"hash\",\"expire_time\": utc_time}}}"
 > aipg-cli createrawtransaction "[{\"txid\":\"mycoin\",\"vout\":0},{\"txid\":\"myownership\",\"vout\":0}]" "{\"issuer_address\":{\"reissue\":{\"asset_name\":\"MYASSET\",\"asset_quantity\":2000000}}}"
