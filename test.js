@@ -1,7 +1,7 @@
-const RavencoinRPC = require("./dist/index.cjs");
+const AipowergridRPC = require("./dist/index.cjs");
 
 test("3rd party service getblockcount", async () => {
-  const rpc = RavencoinRPC.getRPC(
+  const rpc = AipowergridRPC.getRPC(
     "anon",
     "anon",
     "https://rvn-rpc-mainnet.ting.finance/rpc"
@@ -16,7 +16,7 @@ test("3rd party service getblockcount", async () => {
 });
 
 test("3rd party service incorrect method", async () => {
-  const rpc = RavencoinRPC.getRPC(
+  const rpc = AipowergridRPC.getRPC(
     "anon",
     "anon",
     "https://rvn-rpc-mainnet.ting.finance/rpc"
@@ -39,7 +39,7 @@ test("3rd party service incorrect method", async () => {
 });
 
 test("Non existing 3rd party service getblockcount", async () => {
-  const rpc = RavencoinRPC.getRPC(
+  const rpc = AipowergridRPC.getRPC(
     "anon",
     "anon",
     "https://rvn-rpc-mainnet.WRONG.ting.finance/rpc"
